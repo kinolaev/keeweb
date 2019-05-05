@@ -1,7 +1,8 @@
+import { requireHbs } from '../loader.macro';
 import $ from 'jquery';
 import { View } from 'framework/views/view';
 import { UrlFormat } from 'util/formatting/url-format';
-import template from 'templates/storage-file-list.hbs';
+const template = requireHbs('templates/storage-file-list.hbs');
 
 class StorageFileListView extends View {
     template = template;

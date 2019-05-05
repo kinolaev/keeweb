@@ -1,6 +1,7 @@
+import { requireHbs } from '../loader.macro';
 import $ from 'jquery';
 import { View } from 'framework/views/view';
-import template from 'templates/drag.hbs';
+const template = requireHbs('templates/drag.hbs');
 
 class DragView extends View {
     template = template;

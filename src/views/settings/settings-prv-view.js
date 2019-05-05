@@ -1,7 +1,8 @@
+import { requireHbs } from '../../loader.macro';
 import $ from 'jquery';
 import { View } from 'framework/views/view';
 import { Storage } from 'storage';
-import template from 'templates/settings/settings-prv.hbs';
+const template = requireHbs('templates/settings/settings-prv.hbs');
 
 class SettingsPrvView extends View {
     template = template;

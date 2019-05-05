@@ -1,0 +1,8 @@
+*
+!/.git
+/.git/objects/pack
+!/public
+!/src
+!/jsconfig.json
+!/package-lock.json
+!/package.json

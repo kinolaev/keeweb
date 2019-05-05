@@ -1,3 +1,4 @@
+import { requireHbs } from '../loader.macro';
 import $ from 'jquery';
 import { View } from 'framework/views/view';
 import { Events } from 'framework/events';
@@ -26,7 +27,7 @@ import { OpenView } from 'views/open-view';
 import { SettingsView } from 'views/settings/settings-view';
 import { TagView } from 'views/tag-view';
 import { ImportCsvView } from 'views/import-csv-view';
-import template from 'templates/app.hbs';
+const template = requireHbs('templates/app.hbs');
 
 class AppView extends View {
     parent = 'body';

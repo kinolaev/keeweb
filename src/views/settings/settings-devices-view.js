@@ -1,10 +1,11 @@
+import { requireHbs } from '../../loader.macro';
 import { Events } from 'framework/events';
 import { View } from 'framework/views/view';
 import { AppSettingsModel } from 'models/app-settings-model';
 import { YubiKey } from 'comp/app/yubikey';
 import { Links } from 'const/links';
 import { UsbListener } from 'comp/app/usb-listener';
-import template from 'templates/settings/settings-devices.hbs';
+const template = requireHbs('templates/settings/settings-devices.hbs');
 
 class SettingsDevicesView extends View {
     template = template;

@@ -1,6 +1,7 @@
+import { requireHbs } from '../../loader.macro';
 import { View } from 'framework/views/view';
 import { Events } from 'framework/events';
-import template from 'templates/settings/settings-file-external.hbs';
+const template = requireHbs('templates/settings/settings-file-external.hbs');
 
 class SettingsFileExternalView extends View {
     template = template;

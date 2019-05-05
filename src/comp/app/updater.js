@@ -40,22 +40,6 @@ const Updater = {
 
     init() {
         this.scheduleNextCheck();
-        if (!Launcher && navigator.serviceWorker && !RuntimeInfo.beta && !RuntimeInfo.devMode) {
-            navigator.serviceWorker
-                .register('service-worker.js')
-                .then((reg) => {
-                    logger.info('Service worker registered');
-                    reg.addEventListener('updatefound', () => {
-                        if (reg.active) {
-                            logger.info('Service worker found an update');
-                            UpdateModel.set({ updateStatus: 'ready' });
-                        }
-                    });
-                })
-                .catch((e) => {
-                    logger.error('Failed to register a service worker', e);
-                });
-        }
     },
 
     scheduleNextCheck() {

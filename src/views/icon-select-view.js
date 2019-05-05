@@ -1,8 +1,9 @@
+import { requireHbs } from '../loader.macro';
 import $ from 'jquery';
 import { View } from 'framework/views/view';
 import { IconMap } from 'const/icon-map';
 import { Logger } from 'util/logger';
-import template from 'templates/icon-select.hbs';
+const template = requireHbs('templates/icon-select.hbs');
 
 const logger = new Logger('icon-select-view');
 

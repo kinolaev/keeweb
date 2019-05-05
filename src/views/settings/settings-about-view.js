@@ -1,8 +1,9 @@
+import { requireHbs } from '../../loader.macro';
 import { View } from 'framework/views/view';
 import { RuntimeInfo } from 'const/runtime-info';
 import { Links } from 'const/links';
 import { Features } from 'util/features';
-import template from 'templates/settings/settings-about.hbs';
+const template = requireHbs('templates/settings/settings-about.hbs');
 
 class SettingsAboutView extends View {
     template = template;

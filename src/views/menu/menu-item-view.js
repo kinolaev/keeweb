@@ -1,3 +1,4 @@
+import { requireHbs } from '../../loader.macro';
 import $ from 'jquery';
 import { Events } from 'framework/events';
 import { View } from 'framework/views/view';
@@ -6,7 +7,7 @@ import { KeyHandler } from 'comp/browser/key-handler';
 import { Alerts } from 'comp/ui/alerts';
 import { Keys } from 'const/keys';
 import { Locale } from 'util/locale';
-import template from 'templates/menu/menu-item.hbs';
+const template = requireHbs('templates/menu/menu-item.hbs');
 
 class MenuItemView extends View {
     template = template;

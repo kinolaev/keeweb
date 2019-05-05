@@ -1,8 +1,9 @@
+import { requireHbs } from '../loader.macro';
 import $ from 'jquery';
 import { Events } from 'framework/events';
 import { View } from 'framework/views/view';
 import { Keys } from 'const/keys';
-import template from 'templates/dropdown.hbs';
+const template = requireHbs('templates/dropdown.hbs');
 
 class DropdownView extends View {
     parent = 'body';

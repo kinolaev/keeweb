@@ -1,7 +1,8 @@
+import { requireHbs } from '../../loader.macro';
 import { View } from 'framework/views/view';
 import { StringFormat } from 'util/formatting/string-format';
 import { Logger } from 'util/logger';
-import template from 'templates/settings/settings-logs-view.hbs';
+const template = requireHbs('templates/settings/settings-logs-view.hbs');
 
 class SettingsLogsView extends View {
     parent = '.settings__general-advanced';

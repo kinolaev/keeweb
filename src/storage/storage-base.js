@@ -272,7 +272,7 @@ class StorageBase {
         };
 
         const windowMessage = (e) => {
-            if (e.origin !== location.origin) {
+            if (e.origin !== window.location.origin) {
                 return;
             }
             if (!e.data || !e.data.storage || !e.data.search) {
@@ -410,10 +410,12 @@ class StorageBase {
                 if (token && token.error) {
                     return callback && callback('OAuth code exchange error: ' + token.error);
                 }
+                // eslint-disable-next-line no-unused-expressions
                 callback?.();
             },
             error: (err) => {
                 this.logger.error('Error exchanging OAuth code', err);
+                // eslint-disable-next-line no-unused-expressions
                 callback?.('OAuth code exchange error: ' + err);
             }
         });
@@ -449,6 +451,7 @@ class StorageBase {
                     this._oauthToken = null;
                 }
                 this.logger.error('Error exchanging refresh token', err);
+                // eslint-disable-next-line no-unused-expressions
                 callback?.('Error exchanging refresh token');
             }
         });

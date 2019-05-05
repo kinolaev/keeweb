@@ -1,3 +1,4 @@
+import { requireHbs } from '../loader.macro';
 import $ from 'jquery';
 import { View } from 'framework/views/view';
 import { Events } from 'framework/events';
@@ -8,7 +9,7 @@ import { PasswordGenerator } from 'util/generators/password-generator';
 import { PasswordPresenter } from 'util/formatting/password-presenter';
 import { Locale } from 'util/locale';
 import { Tip } from 'util/ui/tip';
-import template from 'templates/generator.hbs';
+const template = requireHbs('templates/generator.hbs');
 
 class GeneratorView extends View {
     parent = 'body';

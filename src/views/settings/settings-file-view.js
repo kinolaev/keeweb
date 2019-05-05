@@ -1,3 +1,4 @@
+import { requireHbs } from '../../loader.macro';
 import $ from 'jquery';
 import kdbxweb from 'kdbxweb';
 import { View } from 'framework/views/view';
@@ -17,7 +18,7 @@ import { Features } from 'util/features';
 import { FileSaver } from 'util/ui/file-saver';
 import { OpenConfigView } from 'views/open-config-view';
 import { omit } from 'util/fn';
-import template from 'templates/settings/settings-file.hbs';
+const template = requireHbs('templates/settings/settings-file.hbs');
 
 const DefaultBackupPath = 'Backups/{name}.{date}.bak';
 const DefaultBackupSchedule = '1w';

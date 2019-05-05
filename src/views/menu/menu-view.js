@@ -1,3 +1,4 @@
+import { requireHbs } from '../../loader.macro';
 import $ from 'jquery';
 import { Events } from 'framework/events';
 import { View } from 'framework/views/view';
@@ -8,7 +9,7 @@ import { Resizable } from 'framework/views/resizable';
 import { DragView } from 'views/drag-view';
 import { MenuSectionView } from 'views/menu/menu-section-view';
 import throttle from 'lodash/throttle';
-import template from 'templates/menu/menu.hbs';
+const template = requireHbs('templates/menu/menu.hbs');
 
 class MenuView extends View {
     parent = '.app__menu';

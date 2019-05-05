@@ -1,3 +1,4 @@
+import { requireRaw, requireBase64 } from '../../loader.macro'
 import kdbxweb from 'kdbxweb';
 import { Logger } from 'util/logger';
 import { Features } from 'util/features';
@@ -99,8 +100,8 @@ const KdbxwebInit = {
             const loadTimeout = setTimeout(() => reject('timeout'), 5000);
             try {
                 const ts = logger.ts();
-                const argon2LoaderCode = require('argon2').default;
-                const wasmBinaryBase64 = require('argon2-wasm');
+                const argon2LoaderCode = requireRaw('argon2-browser/dist/argon2');
+                const wasmBinaryBase64 = requireBase64('argon2-browser/dist/argon2.wasm');
 
                 const KB = 1024 * 1024;
                 const MB = 1024 * KB;
@@ -187,6 +188,7 @@ const KdbxwebInit = {
 
     // eslint-disable-next-line object-shorthand
     workerPostRun: function () {
+        /* eslint-disable no-restricted-globals */
         self.postMessage({ op: 'postRun' });
         self.onmessage = (e) => {
             try {
@@ -197,6 +199,7 @@ const KdbxwebInit = {
                 self.postMessage({ error: e.toString() });
             }
         };
+        /* eslint-enable no-restricted-globals */
     },
 
     // eslint-disable-next-line object-shorthand

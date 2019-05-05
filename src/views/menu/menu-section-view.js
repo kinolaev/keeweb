@@ -1,10 +1,11 @@
+import { requireHbs } from '../../loader.macro';
 import { View } from 'framework/views/view';
 import { AppSettingsModel } from 'models/app-settings-model';
 import { Resizable } from 'framework/views/resizable';
 import { Scrollable } from 'framework/views/scrollable';
 import { MenuItemView } from 'views/menu/menu-item-view';
 import throttle from 'lodash/throttle';
-import template from 'templates/menu/menu-section.hbs';
+const template = requireHbs('templates/menu/menu-section.hbs');
 
 class MenuSectionView extends View {
     template = template;

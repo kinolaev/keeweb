@@ -1,8 +1,9 @@
+import { requireHbs } from '../../loader.macro';
 import { View } from 'framework/views/view';
 import { RuntimeInfo } from 'const/runtime-info';
 import { Links } from 'const/links';
 import { Launcher } from 'comp/launcher';
-import template from 'templates/settings/settings-help.hbs';
+const template = requireHbs('templates/settings/settings-help.hbs');
 
 class SettingsHelpView extends View {
     template = template;

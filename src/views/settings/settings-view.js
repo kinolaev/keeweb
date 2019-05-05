@@ -1,9 +1,10 @@
+import { requireHbs } from '../../loader.macro';
 import { View } from 'framework/views/view';
 import { Events } from 'framework/events';
 import { Keys } from 'const/keys';
 import { Scrollable } from 'framework/views/scrollable';
 import { StringFormat } from 'util/formatting/string-format';
-import template from 'templates/settings/settings.hbs';
+const template = requireHbs('templates/settings/settings.hbs');
 
 class SettingsView extends View {
     parent = '.app__body';

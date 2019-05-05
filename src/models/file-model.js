@@ -1,5 +1,5 @@
+import { requireBase64 } from '../loader.macro';
 import kdbxweb from 'kdbxweb';
-import demoFileData from 'demo.kdbx';
 import { Model } from 'framework/model';
 import { Events } from 'framework/events';
 import { GroupCollection } from 'collections/group-collection';
@@ -10,6 +10,7 @@ import { IconUrlFormat } from 'util/formatting/icon-url-format';
 import { Logger } from 'util/logger';
 import { mapObject } from 'util/fn';
 import { ChalRespCalculator } from 'comp/app/chal-resp-calculator';
+const demoFileData = requireBase64('resources/Demo.kdbx');
 
 const logger = new Logger('file');
 

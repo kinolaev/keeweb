@@ -1,10 +1,11 @@
+import { requireHbs } from '../loader.macro';
 import { Events } from 'framework/events';
 import { View } from 'framework/views/view';
 import { YubiKey } from 'comp/app/yubikey';
 import { Features } from 'util/features';
 import { Locale } from 'util/locale';
 import { Timeouts } from 'const/timeouts';
-import template from 'templates/open-chal-resp.hbs';
+const template = requireHbs('templates/open-chal-resp.hbs');
 
 class OpenChalRespView extends View {
     template = template;

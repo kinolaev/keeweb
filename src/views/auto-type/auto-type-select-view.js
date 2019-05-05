@@ -1,3 +1,4 @@
+import { requireHbs } from '../../loader.macro';
 import $ from 'jquery';
 import { View, DefaultTemplateOptions } from 'framework/views/view';
 import { Events } from 'framework/events';
@@ -10,8 +11,8 @@ import { StringFormat } from 'util/formatting/string-format';
 import { Locale } from 'util/locale';
 import { Scrollable } from 'framework/views/scrollable';
 import { DropdownView } from 'views/dropdown-view';
-import template from 'templates/auto-type/auto-type-select.hbs';
-import itemTemplate from 'templates/auto-type/auto-type-select-item.hbs';
+const template = requireHbs('templates/auto-type/auto-type-select.hbs');
+const itemTemplate = requireHbs('templates/auto-type/auto-type-select-item.hbs');
 
 class AutoTypeSelectView extends View {
     parent = 'body';

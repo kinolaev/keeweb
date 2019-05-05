@@ -1,7 +1,8 @@
+import { requireHbs } from '../../loader.macro';
 import $ from 'jquery';
 import { FieldViewText } from 'views/fields/field-view-text';
 import { escape } from 'util/fn';
-import tagsTemplate from 'templates/details/fields/tags.hbs';
+const tagsTemplate = requireHbs('templates/details/fields/tags.hbs');
 
 class FieldViewTags extends FieldViewText {
     hasOptions = false;

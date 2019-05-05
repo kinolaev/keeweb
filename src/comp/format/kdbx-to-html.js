@@ -1,4 +1,5 @@
 /* eslint-disable import/no-commonjs */
+import { requireHbs } from '../../loader.macro';
 import kdbxweb from 'kdbxweb';
 import { RuntimeInfo } from 'const/runtime-info';
 import { Links } from 'const/links';
@@ -7,8 +8,8 @@ import { StringFormat } from 'util/formatting/string-format';
 import { Locale } from 'util/locale';
 
 const Templates = {
-    db: require('templates/export/db.hbs'),
-    entry: require('templates/export/entry.hbs')
+    db: requireHbs('templates/export/db.hbs'),
+    entry: requireHbs('templates/export/entry.hbs')
 };
 
 const FieldMapping = [

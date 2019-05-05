@@ -1,3 +1,4 @@
+import { requireHbs } from '../loader.macro';
 import $ from 'jquery';
 import { View, DefaultTemplateOptions } from 'framework/views/view';
 import { Events } from 'framework/events';
@@ -13,8 +14,8 @@ import { Scrollable } from 'framework/views/scrollable';
 import { DropdownView } from 'views/dropdown-view';
 import { ListSearchView } from 'views/list-search-view';
 import throttle from 'lodash/throttle';
-import template from 'templates/list.hbs';
-import emptyTemplate from 'templates/list-empty.hbs';
+const template = requireHbs('templates/list.hbs');
+const emptyTemplate = requireHbs('templates/list-empty.hbs');
 
 class ListView extends View {
     parent = '.app__list';
@@ -118,7 +119,7 @@ class ListView extends View {
 
     getItemsTemplate() {
         if (this.model.settings.tableView) {
-            return require('templates/list-table.hbs');
+            return requireHbs('templates/list-table.hbs');
         } else {
             return this.renderPlainItems;
         }
@@ -130,9 +131,9 @@ class ListView extends View {
 
     getItemTemplate() {
         if (this.model.settings.tableView) {
-            return require('templates/list-item-table.hbs');
+            return requireHbs('templates/list-item-table.hbs');
         } else {
-            return require('templates/list-item-short.hbs');
+            return requireHbs('templates/list-item-short.hbs');
         }
     }
 

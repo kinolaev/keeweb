@@ -1,3 +1,4 @@
+import { requireHbs } from '../../loader.macro';
 import $ from 'jquery';
 import kdbxweb from 'kdbxweb';
 import { View } from 'framework/views/view';
@@ -12,7 +13,7 @@ import { PasswordPresenter } from 'util/formatting/password-presenter';
 import { DropdownView } from 'views/dropdown-view';
 import { AppSettingsModel } from 'models/app-settings-model';
 import { Timeouts } from 'const/timeouts';
-import template from 'templates/details/fields/field.hbs';
+const template = requireHbs('templates/details/fields/field.hbs');
 
 class FieldView extends View {
     template = template;

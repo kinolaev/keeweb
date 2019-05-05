@@ -1,8 +1,9 @@
+import { requireHbs } from '../../loader.macro';
 import $ from 'jquery';
 import { View } from 'framework/views/view';
 import { Shortcuts } from 'comp/app/shortcuts';
 import { Features } from 'util/features';
-import template from 'templates/details/details-attachment.hbs';
+const template = requireHbs('templates/details/details-attachment.hbs');
 
 class DetailsAttachmentView extends View {
     template = template;

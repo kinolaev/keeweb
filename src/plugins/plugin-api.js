@@ -7,9 +7,11 @@ const Libs = {
     qrcode: require('jsqrcode')
 };
 
+const basePath = '../';
+
 const PluginApi = {
     require(module) {
-        return Libs[module] || require('../' + module);
+        return Libs[module] || require(basePath + module);
     }
 };
 

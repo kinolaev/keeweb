@@ -1,5 +1,6 @@
+import { requireHbs } from '../../loader.macro';
 import { View } from 'framework/views/view';
-import template from 'templates/details/details-add-field.hbs';
+const template = requireHbs('templates/details/details-add-field.hbs');
 
 class DetailsAddFieldView extends View {
     parent = '.details__body-fields';

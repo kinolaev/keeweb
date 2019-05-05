@@ -1,10 +1,11 @@
+import { requireHbs } from '../loader.macro';
 import { View } from 'framework/views/view';
 import { SecureInput } from 'comp/browser/secure-input';
 import { Alerts } from 'comp/ui/alerts';
 import { Keys } from 'const/keys';
 import { Locale } from 'util/locale';
 import { InputFx } from 'util/ui/input-fx';
-import template from 'templates/key-change.hbs';
+const template = requireHbs('templates/key-change.hbs');
 
 class KeyChangeView extends View {
     parent = '.app__body';

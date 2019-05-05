@@ -1,9 +1,10 @@
+import { requireHbs } from '../../loader.macro';
 import $ from 'jquery';
 import { View } from 'framework/views/view';
 import { Links } from 'const/links';
 import { Timeouts } from 'const/timeouts';
 import { Features } from 'util/features';
-import template from 'templates/auto-type-hint.hbs';
+const template = requireHbs('templates/auto-type-hint.hbs');
 
 class AutoTypeHintView extends View {
     parent = 'body';

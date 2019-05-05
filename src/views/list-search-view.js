@@ -1,3 +1,4 @@
+import { requireHbs } from '../loader.macro';
 import $ from 'jquery';
 import { View } from 'framework/views/view';
 import { Events } from 'framework/events';
@@ -9,7 +10,7 @@ import { Features } from 'util/features';
 import { StringFormat } from 'util/formatting/string-format';
 import { Locale } from 'util/locale';
 import { DropdownView } from 'views/dropdown-view';
-import template from 'templates/list-search.hbs';
+const template = requireHbs('templates/list-search.hbs');
 
 class ListSearchView extends View {
     parent = '.list__header';

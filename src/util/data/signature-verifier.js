@@ -1,7 +1,8 @@
+import { requireRaw } from '../../loader.macro';
 import kdbxweb from 'kdbxweb';
 import { Logger } from 'util/logger';
-import publicKeyData from 'public-key.pem';
-import publicKeyDataNew from 'public-key-new.pem';
+const publicKeyData = requireRaw('resources/public-key.pem');
+const publicKeyDataNew = requireRaw('resources/public-key-new.pem');
 
 const SignatureVerifier = {
     logger: new Logger('signature-verifier'),

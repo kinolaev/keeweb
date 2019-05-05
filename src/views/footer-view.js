@@ -1,3 +1,4 @@
+import { requireHbs } from '../loader.macro';
 import $ from 'jquery';
 import { View } from 'framework/views/view';
 import { Events } from 'framework/events';
@@ -5,7 +6,7 @@ import { KeyHandler } from 'comp/browser/key-handler';
 import { Keys } from 'const/keys';
 import { UpdateModel } from 'models/update-model';
 import { GeneratorView } from 'views/generator-view';
-import template from 'templates/footer.hbs';
+const template = requireHbs('templates/footer.hbs');
 
 class FooterView extends View {
     parent = '.app__footer';

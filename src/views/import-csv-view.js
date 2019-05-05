@@ -1,8 +1,9 @@
+import { requireHbs } from '../loader.macro';
 import kdbxweb from 'kdbxweb';
 import { View } from 'framework/views/view';
 import { Scrollable } from 'framework/views/scrollable';
-import template from 'templates/import-csv.hbs';
 import { EntryModel } from 'models/entry-model';
+const template = requireHbs('templates/import-csv.hbs');
 
 class ImportCsvView extends View {
     parent = '.app__body';

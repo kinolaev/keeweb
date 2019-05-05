@@ -1,3 +1,4 @@
+import { requireHbs } from '../../loader.macro';
 import $ from 'jquery';
 import { View } from 'framework/views/view';
 import { Shortcuts } from 'comp/app/shortcuts';
@@ -5,7 +6,7 @@ import { Launcher } from 'comp/launcher';
 import { Keys } from 'const/keys';
 import { Features } from 'util/features';
 import { Locale } from 'util/locale';
-import template from 'templates/settings/settings-shortcuts.hbs';
+const template = requireHbs('templates/settings/settings-shortcuts.hbs');
 
 class SettingsShortcutsView extends View {
     template = template;

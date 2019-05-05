@@ -1,3 +1,4 @@
+import { requireHbs } from '../loader.macro';
 import $ from 'jquery';
 import { View } from 'framework/views/view';
 import { Events } from 'framework/events';
@@ -5,7 +6,7 @@ import { AutoType } from 'auto-type';
 import { Scrollable } from 'framework/views/scrollable';
 import { AutoTypeHintView } from 'views/auto-type/auto-type-hint-view';
 import { IconSelectView } from 'views/icon-select-view';
-import template from 'templates/grp.hbs';
+const template = requireHbs('templates/grp.hbs');
 
 class GrpView extends View {
     parent = '.app__panel';

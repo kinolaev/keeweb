@@ -1,9 +1,10 @@
+import { requireHbs } from '../loader.macro';
 import $ from 'jquery';
 import { Events } from 'framework/events';
 import { View } from 'framework/views/view';
 import { Alerts } from 'comp/ui/alerts';
 import { Locale } from 'util/locale';
-import template from 'templates/tag.hbs';
+const template = requireHbs('templates/tag.hbs');
 
 class TagView extends View {
     parent = '.app__panel';

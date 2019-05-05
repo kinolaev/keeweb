@@ -1,7 +1,8 @@
+import { requireHbs } from '../loader.macro';
 import $ from 'jquery';
 import { View } from 'framework/views/view';
 import { Keys } from 'const/keys';
-import template from 'templates/modal.hbs';
+const template = requireHbs('templates/modal.hbs');
 
 class ModalView extends View {
     parent = 'body';

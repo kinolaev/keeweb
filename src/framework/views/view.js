@@ -60,6 +60,7 @@ class View extends EventEmitter {
 
         Tip.createTips(this.el);
 
+        // eslint-disable-next-line no-unused-expressions
         this.debugLogger?.debug('Render finished', this.debugLogger.ts(ts));
 
         return this;
@@ -130,6 +131,7 @@ class View extends EventEmitter {
             eventsMap[event].push({ selector, method });
         }
         for (const [event, handlers] of Object.entries(eventsMap)) {
+            // eslint-disable-next-line no-unused-expressions
             this.debugLogger?.debug('Bind', 'view', event, handlers);
             const listener = (e) => this.eventListener(e, handlers);
             this.eventListeners[event] = listener;
@@ -152,6 +154,7 @@ class View extends EventEmitter {
         this.unbindElementEvents();
         for (const cfg of this.elementEventListeners) {
             const els = this.el.querySelectorAll(cfg.selector);
+            // eslint-disable-next-line no-unused-expressions
             this.debugLogger?.debug('Bind', 'element', cfg.event, cfg.selector, els.length);
             cfg.listener = (e) => this.eventListener(e, [cfg]);
             for (const el of els) {
@@ -174,6 +177,7 @@ class View extends EventEmitter {
     }
 
     eventListener(e, handlers) {
+        // eslint-disable-next-line no-unused-expressions
         this.debugLogger?.debug('Listener fired', e.type);
         for (const { selector, method } of handlers) {
             if (selector) {
@@ -183,9 +187,11 @@ class View extends EventEmitter {
                 }
             }
             if (!this[method]) {
+                // eslint-disable-next-line no-unused-expressions
                 this.debugLogger?.debug('Method not defined', method);
                 continue;
             }
+            // eslint-disable-next-line no-unused-expressions
             this.debugLogger?.debug('Handling event', e.type, method);
             this[method](e);
         }
@@ -202,6 +208,7 @@ class View extends EventEmitter {
         this.el.remove();
         this.removed = true;
 
+        // eslint-disable-next-line no-unused-expressions
         this.debugLogger?.debug('Remove');
     }
 
@@ -236,6 +243,7 @@ class View extends EventEmitter {
     }
 
     toggle(visible) {
+        // eslint-disable-next-line no-unused-expressions
         this.debugLogger?.debug(visible ? 'Show' : 'Hide');
         if (visible === undefined) {
             visible = this.hidden;

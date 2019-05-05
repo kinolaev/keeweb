@@ -1,7 +1,8 @@
+import { requireHbs } from '../../loader.macro';
 import $ from 'jquery';
 import { Keys } from 'const/keys';
 import { FieldViewText } from 'views/fields/field-view-text';
-import completionsTemplate from 'templates/details/fields/completions.hbs';
+const completionsTemplate = requireHbs('templates/details/fields/completions.hbs');
 
 class FieldViewAutocomplete extends FieldViewText {
     hasOptions = true;

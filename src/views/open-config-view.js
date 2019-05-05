@@ -1,7 +1,8 @@
+import { requireHbs } from '../loader.macro';
 import { View } from 'framework/views/view';
 import { Keys } from 'const/keys';
 import { Locale } from 'util/locale';
-import template from 'templates/open-config.hbs';
+const template = requireHbs('templates/open-config.hbs');
 
 class OpenConfigView extends View {
     template = template;

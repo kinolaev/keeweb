@@ -1,3 +1,4 @@
+import { requireHbs } from '../../loader.macro';
 import $ from 'jquery';
 import { View } from 'framework/views/view';
 import { Alerts } from 'comp/ui/alerts';
@@ -9,7 +10,7 @@ import { Copyable } from 'framework/views/copyable';
 import { FieldViewReadOnly } from 'views/fields/field-view-read-only';
 import { FieldViewReadOnlyRaw } from 'views/fields/field-view-read-only-raw';
 import { escape } from 'util/fn';
-import template from 'templates/details/details-history.hbs';
+const template = requireHbs('templates/details/details-history.hbs');
 
 class DetailsHistoryView extends View {
     template = template;

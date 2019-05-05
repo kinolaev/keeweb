@@ -1,3 +1,4 @@
+import { requireHbs } from '../loader.macro';
 import $ from 'jquery';
 import kdbxweb from 'kdbxweb';
 import { View } from 'framework/views/view';
@@ -23,7 +24,7 @@ import { StorageFileListView } from 'views/storage-file-list-view';
 import { OpenChalRespView } from 'views/open-chal-resp-view';
 import { omit } from 'util/fn';
 import { GeneratorView } from 'views/generator-view';
-import template from 'templates/open.hbs';
+const template = requireHbs('templates/open.hbs');
 
 const logger = new Logger('open-view');
 

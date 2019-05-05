@@ -1,7 +1,8 @@
+import { requireRaw } from '../loader.macro'
 import { Color } from 'util/data/color';
 
-import ThemeVarsScss from '!!raw-loader!../../styles/base/_theme-vars.scss';
-import ThemeDefaults from '!!raw-loader!../../styles/themes/_theme-defaults.scss';
+const ThemeVarsScss = requireRaw('styles/base/_theme-vars.scss');
+const ThemeDefaults = requireRaw('styles/themes/_theme-defaults.scss');
 
 const ThemeVars = {
     themeDefaults: null,

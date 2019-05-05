@@ -1,3 +1,4 @@
+import { requireHbs } from '../../loader.macro';
 import $ from 'jquery';
 import { View } from 'framework/views/view';
 import { Events } from 'framework/events';
@@ -13,7 +14,7 @@ import { SemVer } from 'util/data/semver';
 import { Features } from 'util/features';
 import { DateFormat } from 'util/formatting/date-format';
 import { Locale } from 'util/locale';
-import template from 'templates/settings/settings-plugins.hbs';
+const template = requireHbs('templates/settings/settings-plugins.hbs');
 
 class SettingsPluginsView extends View {
     template = template;

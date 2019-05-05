@@ -1,3 +1,4 @@
+import { requireHbs } from '../loader.macro';
 import $ from 'jquery';
 import { Events } from 'framework/events';
 import { View } from 'framework/views/view';
@@ -5,7 +6,7 @@ import { GeneratorPresets } from 'comp/app/generator-presets';
 import { PasswordGenerator, CharRanges } from 'util/generators/password-generator';
 import { Locale } from 'util/locale';
 import { Scrollable } from 'framework/views/scrollable';
-import template from 'templates/generator-presets.hbs';
+const template = requireHbs('templates/generator-presets.hbs');
 
 class GeneratorPresetsView extends View {
     parent = '.app__panel';

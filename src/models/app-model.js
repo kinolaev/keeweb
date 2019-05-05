@@ -413,6 +413,7 @@ class AppModel {
     getEntryTemplates() {
         const entryTemplates = [];
         this.files.forEach((file) => {
+            // eslint-disable-next-line no-unused-expressions
             file.forEachEntryTemplate?.((entry) => {
                 entryTemplates.push({ file, entry });
             });

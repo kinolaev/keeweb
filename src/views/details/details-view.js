@@ -1,3 +1,4 @@
+import { requireHbs } from '../../loader.macro';
 import $ from 'jquery';
 import kdbxweb from 'kdbxweb';
 import { View } from 'framework/views/view';
@@ -26,9 +27,9 @@ import { createDetailsFields } from 'views/details/details-fields';
 import { FieldViewCustom } from 'views/fields/field-view-custom';
 import { IconSelectView } from 'views/icon-select-view';
 import { isEqual } from 'util/fn';
-import template from 'templates/details/details.hbs';
-import emptyTemplate from 'templates/details/details-empty.hbs';
-import groupTemplate from 'templates/details/details-group.hbs';
+const template = requireHbs('templates/details/details.hbs');
+const emptyTemplate = requireHbs('templates/details/details-empty.hbs');
+const groupTemplate = requireHbs('templates/details/details-group.hbs');
 
 class DetailsView extends View {
     parent = '.app__details';
@@ -463,6 +464,7 @@ class DetailsView extends View {
         }
 
         this.matchingOtpEntry = this.appModel.getMatchingOtpEntry(this.model);
+        // eslint-disable-next-line no-unused-expressions
         this.matchingOtpEntry?.initOtpGenerator();
     }
 

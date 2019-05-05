@@ -1,3 +1,4 @@
+import { requireHbs } from '../../loader.macro';
 import $ from 'jquery';
 import { Events } from 'framework/events';
 import { View } from 'framework/views/view';
@@ -18,7 +19,7 @@ import { Locale } from 'util/locale';
 import { SettingsLogsView } from 'views/settings/settings-logs-view';
 import { SettingsPrvView } from 'views/settings/settings-prv-view';
 import { mapObject } from 'util/fn';
-import template from 'templates/settings/settings-general.hbs';
+const template = requireHbs('templates/settings/settings-general.hbs');
 
 class SettingsGeneralView extends View {
     template = template;
