@@ -8,14 +8,14 @@ const Features = {
     isMac: navigator.platform.indexOf('Mac') >= 0,
     isWindows: navigator.platform.indexOf('Win') >= 0,
     isiOS: /iPad|iPhone|iPod/i.test(navigator.userAgent),
-    isMobile: MobileRegex.test(navigator.userAgent) || screen.width < MinDesktopScreenWidth,
+    isMobile: MobileRegex.test(navigator.userAgent) || window.screen.width < MinDesktopScreenWidth,
     isPopup: !!(window.parent !== window.top || window.opener),
     isStandalone: !!navigator.standalone,
     isFrame: window.top !== window,
     isSelfHosted:
         !isDesktop &&
-        !/^http(s?):\/\/((localhost:8085)|((app|beta)\.keeweb\.info))/.test(location.href),
-    isLocal: location.origin.indexOf('localhost') >= 0,
+        !/^http(s?):\/\/((localhost:8085)|((app|beta)\.keeweb\.info))/.test(window.location.href),
+    isLocal: window.location.origin.indexOf('localhost') >= 0,
 
     supportsTitleBarStyles() {
         return this.isMac;

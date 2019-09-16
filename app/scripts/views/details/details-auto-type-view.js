@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import { View } from 'framework/views/view';
 import { AutoType } from 'auto-type';
 import { Shortcuts } from 'comp/app/shortcuts';

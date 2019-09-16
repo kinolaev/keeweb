@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import { View } from 'framework/views/view';
 import template from 'templates/drag.hbs';
 

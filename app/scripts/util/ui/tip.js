@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import { Events } from 'framework/events';
 import { Features } from 'util/features';
 import { pick } from 'util/fn';

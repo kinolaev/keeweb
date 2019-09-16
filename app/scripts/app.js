@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import { Events } from 'framework/events';
 import { StartProfiler } from 'comp/app/start-profiler';
 import { FileInfoCollection } from 'collections/file-info-collection';
@@ -143,8 +144,8 @@ ready(() => {
         return Promise.resolve().then(() => {
             const skipHttpsWarning =
                 localStorage.skipHttpsWarning || appModel.settings.skipHttpsWarning;
-            const protocolIsInsecure = ['https:', 'file:', 'app:'].indexOf(location.protocol) < 0;
-            const hostIsInsecure = location.hostname !== 'localhost';
+            const protocolIsInsecure = ['https:', 'file:', 'app:'].indexOf(window.location.protocol) < 0;
+            const hostIsInsecure = window.location.hostname !== 'localhost';
             if (protocolIsInsecure && hostIsInsecure && !skipHttpsWarning) {
                 return new Promise((resolve) => {
                     Alerts.error({
@@ -194,7 +195,7 @@ ready(() => {
         if (metaConfig && metaConfig.content && metaConfig.content[0] !== '(') {
             return metaConfig.content;
         }
-        const match = location.search.match(/[?&]config=([^&]+)/i);
+        const match = window.location.search.match(/[?&]config=([^&]+)/i);
         if (match && match[1]) {
             return match[1];
         }

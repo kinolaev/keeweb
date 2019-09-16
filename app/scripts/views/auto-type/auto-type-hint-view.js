@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import { View } from 'framework/views/view';
 import { Links } from 'const/links';
 import { Timeouts } from 'const/timeouts';

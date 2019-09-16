@@ -174,9 +174,9 @@ class StorageWebDav extends StorageBase {
                                     if (movePath.indexOf('://') < 0) {
                                         if (movePath.indexOf('/') === 0) {
                                             movePath =
-                                                location.protocol + '//' + location.host + movePath;
+                                                window.location.protocol + '//' + window.location.host + movePath;
                                         } else {
-                                            movePath = location.href
+                                            movePath = window.location.href
                                                 .replace(/\?(.*)/, '')
                                                 .replace(/[^/]*$/, movePath);
                                         }

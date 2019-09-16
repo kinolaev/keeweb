@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import kdbxweb from 'kdbxweb';
 import { Events } from 'framework/events';
 import { KeyHandler } from 'comp/browser/key-handler';

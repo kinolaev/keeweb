@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import { View } from 'framework/views/view';
 import { Events } from 'framework/events';
 import { GeneratorPresets } from 'comp/app/generator-presets';

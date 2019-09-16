@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import morphdom from 'morphdom';
 import EventEmitter from 'events';
 import { Tip } from 'util/ui/tip';

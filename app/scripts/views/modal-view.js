@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import { View } from 'framework/views/view';
 import { Keys } from 'const/keys';
 import template from 'templates/modal.hbs';

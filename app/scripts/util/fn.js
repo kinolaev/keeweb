@@ -1,4 +1,4 @@
-import Handlebars from 'hbs';
+import Handlebars from 'handlebars/runtime';
 
 /**
  * Replacements for methods that are bloated in lodash, as well as other useful helpers.

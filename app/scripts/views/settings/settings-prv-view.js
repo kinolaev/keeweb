@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import { View } from 'framework/views/view';
 import { Storage } from 'storage';
 import template from 'templates/settings/settings-prv.hbs';

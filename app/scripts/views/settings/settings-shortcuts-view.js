@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import { View } from 'framework/views/view';
 import { Shortcuts } from 'comp/app/shortcuts';
 import { Launcher } from 'comp/launcher';

@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import { View } from 'framework/views/view';
 import { Alerts } from 'comp/ui/alerts';
 import { Keys } from 'const/keys';

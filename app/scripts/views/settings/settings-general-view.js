@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import { Events } from 'framework/events';
 import { View } from 'framework/views/view';
 import { AutoType } from 'auto-type';
@@ -393,7 +394,7 @@ class SettingsGeneralView extends View {
                 body: Locale.setGenTryBetaWarningBody
             });
         } else {
-            location.href = Links.BetaWebApp;
+            window.location.href = Links.BetaWebApp;
         }
     }
 
@@ -407,7 +408,7 @@ class SettingsGeneralView extends View {
     }
 
     reloadApp() {
-        location.reload();
+        window.location.reload();
     }
 
     scrollToBottom() {

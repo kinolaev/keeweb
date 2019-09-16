@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import { View, DefaultTemplateOptions } from 'framework/views/view';
 import { Events } from 'framework/events';
 import { SearchResultCollection } from 'collections/search-result-collection';

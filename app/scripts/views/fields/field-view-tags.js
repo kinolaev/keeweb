@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import { FieldViewText } from 'views/fields/field-view-text';
 import { escape } from 'util/fn';
 import tagsTemplate from 'templates/details/fields/tags.hbs';

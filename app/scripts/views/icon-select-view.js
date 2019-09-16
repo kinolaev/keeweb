@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import { View } from 'framework/views/view';
 import { IconMap } from 'const/icon-map';
 import { Logger } from 'util/logger';

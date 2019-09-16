@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import kdbxweb from 'kdbxweb';
 import { View } from 'framework/views/view';
 import { Events } from 'framework/events';

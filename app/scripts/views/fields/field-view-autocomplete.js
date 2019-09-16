@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import { Keys } from 'const/keys';
 import { FieldViewText } from 'views/fields/field-view-text';
 import completionsTemplate from 'templates/details/fields/completions.hbs';

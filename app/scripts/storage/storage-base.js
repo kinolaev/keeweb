@@ -164,19 +164,19 @@ class StorageBase {
     }
 
     _openPopup(url, title, width, height, extras) {
-        const dualScreenLeft = window.screenLeft !== undefined ? window.screenLeft : screen.left;
-        const dualScreenTop = window.screenTop !== undefined ? window.screenTop : screen.top;
+        const dualScreenLeft = window.screenLeft !== undefined ? window.screenLeft : window.screen.left;
+        const dualScreenTop = window.screenTop !== undefined ? window.screenTop : window.screen.top;
 
         const winWidth = window.innerWidth
             ? window.innerWidth
             : document.documentElement.clientWidth
             ? document.documentElement.clientWidth
-            : screen.width;
+            : window.screen.width;
         const winHeight = window.innerHeight
             ? window.innerHeight
             : document.documentElement.clientHeight
             ? document.documentElement.clientHeight
-            : screen.height;
+            : window.screen.height;
 
         const left = winWidth / 2 - width / 2 + dualScreenLeft;
         const top = winHeight / 2 - height / 2 + dualScreenTop;

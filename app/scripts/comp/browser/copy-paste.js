@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import { Events } from 'framework/events';
 import { Launcher } from 'comp/launcher';
 import { AppSettingsModel } from 'models/app-settings-model';
